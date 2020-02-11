@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static PlayerMovement instace;
+    public static PlayerMovement instance;
 
     public float speed;
     private Rigidbody2D myRigidbody;
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instace=this;
+        instance=this;
 
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();

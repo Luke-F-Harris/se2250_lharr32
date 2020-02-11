@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  playerBag: {fileID: 11400000, guid: 724665249301c7f44865302505a26bc7, type: 2}
+  expBar: {fileID: 11400000, guid: ac689a48a6e49b24a8b9a649ec86d1b8, type: 2}
 --- !u!50 &2138872230234499881
 Rigidbody2D:
   serializedVersion: 4
