@@ -25,7 +25,7 @@ public class DownStairs_StartingRoom : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("StartingRoom");
             other.gameObject.transform.position = target.gameObject.transform.position;
         }
     }

@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine.SceneManagement;
-
 public class StarterHouse_Outside : MonoBehaviour
 {
-
-
-
     // Start is called before the first frame update
-
-    private void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene("Outside");
+        
+    }
 
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
