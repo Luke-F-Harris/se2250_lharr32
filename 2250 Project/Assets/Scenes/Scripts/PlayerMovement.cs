@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
 
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    
+    public Bag playerBag;
+    public ExpBar expBar;
+
+    private int _level = 0, _skillTokens = 0, _attack = 3, _defense = 3, _speed = 3;
 
     // Start is called before the first frame update
     void Start()
     {
+        instance=this;
+
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
     }
@@ -25,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         updateAnimationAndMove();
+
+        if(Input.GetKey("e")){
+            OpenMenu();
+        }
 
     }
 
@@ -47,5 +59,30 @@ public class PlayerMovement : MonoBehaviour
     void MoveCharacter()
     {
         myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
+    }
+
+    public void LevelUp(){
+        this._level++;
+        this._skillTokens++;
+
+        this._attack+=_level;
+        this._defense+=_level;
+        this._speed+=_level;
+    }
+
+    public int GetLevel(){
+        return this._level;
+    }
+
+    void OpenMenu(){
+
+    }
+
+    void SelectSkills(){
+
+    }
+
+    void OpenBag(){
+        Debug.Log(playerBag.items);
     }
 }

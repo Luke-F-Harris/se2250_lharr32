@@ -175,6 +175,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2138872230234499882, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138872230234499882, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
+        type: 3}
+      propertyPath: playerBag
+      value: 
+      objectReference: {fileID: 11400000, guid: 724665249301c7f44865302505a26bc7,
+        type: 2}
+    - target: {fileID: 2138872230234499882, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
+        type: 3}
+      propertyPath: expBar
+      value: 
+      objectReference: {fileID: 11400000, guid: ac689a48a6e49b24a8b9a649ec86d1b8,
+        type: 2}
     - target: {fileID: 2138872230234499886, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
         type: 3}
       propertyPath: m_Name
