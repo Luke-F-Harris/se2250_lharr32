@@ -18,7 +18,7 @@ public class Bag : ScriptableObject
     }
 
     public void addBattleItem(Item item){
-        if(this.battleItems.length){
+        if(this.battleItems.Count < 1){
             this.battleItems.Add(item);
         }
         else{
