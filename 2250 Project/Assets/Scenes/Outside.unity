@@ -8232,7 +8232,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1760941245}
     - target: {fileID: 4427410510641854822, guid: c4fea85b8c6ad57449d1038f427a7671,
         type: 3}
       propertyPath: minPosition.x
@@ -25960,7 +25960,7 @@ PrefabInstance:
     - target: {fileID: 2138872230234499892, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2138872230234499892, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
         type: 3}
@@ -29326,6 +29326,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1760941245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2138872230234499892, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1328971600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796033946
 GameObject:
   m_ObjectHideFlags: 0
