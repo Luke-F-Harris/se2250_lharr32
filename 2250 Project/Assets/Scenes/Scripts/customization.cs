@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class customization : MonoBehaviour
 {
-
-
     private bool _playerInZone;
     public GameObject pressX;
     public GameObject target;
