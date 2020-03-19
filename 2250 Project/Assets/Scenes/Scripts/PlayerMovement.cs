@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Bag playerBag;
     public ExpBar expBar;
 
-    private int _level = 0, _skillTokens = 0, _attack = 3, _defense = 3, _speed = 3;
+    private int _level = 0, _skillTokens = 0, _attack = 3, _health=20, _speed = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         this._skillTokens++;
 
         this._attack+=_level;
-        this._defense+=_level;
+        this._health+=_level*10;
         this._speed+=_level;
     }
 
