@@ -6,6 +6,7 @@ using UnityEngine;
 public class Bag : ScriptableObject
 {
     public List<Item> items = new List<Item>();
+    public List<Item> battleItems = new List<Item>();
 
     public void addItem(Item item){
         this.items.Add(item);
