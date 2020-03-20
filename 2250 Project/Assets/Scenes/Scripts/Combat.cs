@@ -24,11 +24,8 @@ public class Combat : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.tag == "EnemyAttack" && gameObject.tag =="Player"){
-            // gameObject.GetComponent<Health>.Damage(collision.gameObject.attackDamage);
-        }
-        else if (collision.gameObject.tag == "PlayerAttack" && gameObject.tag =="Enemy"){
-            // gameObject.GetComponent<Health>.Damage(collision.gameObject.attackDamage);
+        if (collision.gameObject.tag == "EnemyAttack" || collision.gameObject.tag == "PlayerAttack"){
+            gameObject.GetComponent<Health>().Damage(collision.gameObject.GetComponent<AttackCollider>().damage);
         }
     }
     
