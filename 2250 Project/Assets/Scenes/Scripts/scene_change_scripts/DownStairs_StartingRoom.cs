@@ -8,7 +8,7 @@ public class DownStairs_StartingRoom : MonoBehaviour
 {
 
     public Transform target;
-
+    private PlayerMovement Player;
     // Start is called before the first frame update
     void Start()
     {
