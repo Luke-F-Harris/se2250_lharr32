@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class BattleItemScript : MonoBehaviour
 {
-    public BattleItem item;
+    private BattleItem battleItem;
 
     public void setItem(BattleItem battleItem){
-        this.item = battleItem;
+        this.battleItem = battleItem;
     }
 
     public void removeItem(){
-        this.item=null;
+        this.battleItem=null;
+    }
+
+    public BattleItem item {
+        get {
+            return this.battleItem != null ? this.battleItem : new BattleItem();
+        }
     }
 }
