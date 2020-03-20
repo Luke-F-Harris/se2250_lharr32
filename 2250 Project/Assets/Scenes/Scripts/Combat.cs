@@ -12,7 +12,13 @@ public class Combat : MonoBehaviour
     }
 
     void Attack(){
-        // spawn attack collider
+        BattleItemScript item = gameObject.GetComponent<BattleItemScript>();
+        int rangeX = item.item.rangeX, rangeZ = item.item.rangeZ;
+        
+        GameObject attack = Instantiate(AttackCollider,gameObject.transform.position + gameObject.transform.forward,Quaternion.identity); //spawns a boxcollider in the attack range
+        attack.GetComponent<AttackCollider>().Damage = item.item.attackDamage;
+        attack.GetComponent<BoxCollider2D>().Scale = new Vector3(rangeX, 1, rangeZ);
+        attack.tag = gameObject.tag == Player ? "PlayerAttack" : "EnemyAttack";
     }
 
     void OnCollisionEnter2D(Collision2D collision){
