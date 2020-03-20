@@ -170,6 +170,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2138872230234499880, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2138872230234499886, guid: 3a8f1fa9cff929e4dbccf679851b9e0d,
         type: 3}
       propertyPath: m_Name
@@ -4890,7 +4895,7 @@ Animator:
   m_GameObject: {fileID: 1639273335}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80fd77b088c27da40a9671df57c2f8d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
