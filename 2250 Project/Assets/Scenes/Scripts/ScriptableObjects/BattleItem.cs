@@ -5,5 +5,5 @@ using UnityEngine;
 public class BattleItem : Item
 {
     public static string [] attackTypes = {"stab", "slice", "throw"};
-    public int attackDamage;
+    public int attackDamage, rangeX, rangeZ;
 }
