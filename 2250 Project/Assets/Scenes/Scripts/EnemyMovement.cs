@@ -7,7 +7,7 @@ public abstract class EnemyMovement : MonoBehaviour
     public float moveTime = 0.1f;
     public LayerMask blockingLayer;
 
-    private BoxCollider2D
+  
     // Start is called before the first frame update
     void Start()
     {
