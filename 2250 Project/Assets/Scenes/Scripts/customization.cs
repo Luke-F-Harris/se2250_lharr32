@@ -5,21 +5,20 @@ using UnityEngine;
 public class customization : MonoBehaviour
 {
 
-    public Sprite newSprite;
-
-
 
     private bool _playerInZone;
     public GameObject pressX;
-    public GameObject target;
-    public Animator animator;
+    public PlayerMovement player;
+    private Animator _animator;
+    public string[] outfits = { "IdleChangeClothes", "Idle" };
+    public int outfitsPicker = 0;
 
     // Start is called before the first frame update
     void Start()
     {
 
         pressX.SetActive(false);
-        animator = target.GetComponent<Animator>();
+        _animator = player.GetComponent<Animator>();
 
 
     }
@@ -30,13 +29,12 @@ public class customization : MonoBehaviour
         if (_playerInZone)
         {
             pressX.SetActive(true);
-            FollowObject(target);
-            if (Input.GetKey("x"))
+            FollowObject(player);
+            if (Input.GetKeyUp("x"))
             {
                 Debug.Log("You just changed clothes!");
-                Debug.Log(target.GetComponent<SpriteRenderer>().sprite);
-                animator.Play("IdleChangeClothes");
-                Debug.Log(target.GetComponent<SpriteRenderer>().sprite);
+                _animator.Play((string)outfits[outfitsPicker % 2]);
+                outfitsPicker++;
 
             }
         }
@@ -53,7 +51,7 @@ public class customization : MonoBehaviour
             _playerInZone = true;
         }
     }
-    private void FollowObject(GameObject other)
+    private void FollowObject(PlayerMovement other)
     {
         pressX.transform.position = Camera.main.WorldToScreenPoint(other.transform.position) + new Vector3(0, 30, 0);
     }

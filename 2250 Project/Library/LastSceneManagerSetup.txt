@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Outside.unity
+- path: Assets/Scenes/DownStairsOfStartingRoom.unity
   isLoaded: 1
   isActive: 1
